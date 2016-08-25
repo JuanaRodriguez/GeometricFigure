@@ -1,21 +1,28 @@
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static junit.framework.TestCase.assertEquals;
 
 /**
- * Created by JuanaRodriguez on 8/24/2016.
+ * @autor JuanaRodriguez on 8/24/2016.
  */
 public class TestTriangle {
-    @Test
-    public void test_calculateArea(){
-        Triangle triangle = new Triangle();
-        double areaExpected = 2.0;
-        assertEquals(areaExpected,triangle.calculateArea(2,2),0);
+    Figures triangle;
+
+    @Before
+    public void initialize() {
+        triangle = new Triangle(2, 2, 2);
     }
+
     @Test
-    public void test_calculatePerimeter(){
-        Triangle triangle = new Triangle();
+    public void test_calculateArea() {
+        double areaExpected = 2.0;
+        assertEquals(areaExpected, triangle.calculateArea());
+    }
+
+    @Test
+    public void test_calculatePerimeter() {
         double perimeterExpected = 8.0;
-        assertEquals(perimeterExpected,triangle.calculatePerimeter(2),0);
+        assertEquals(perimeterExpected, triangle.calculatePerimeter());
     }
 }
