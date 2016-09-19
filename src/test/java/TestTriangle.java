@@ -4,13 +4,13 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
 /**
- * @autor JuanaRodriguez on 8/24/2016.
+ * Test for {@link Triangle}
  */
 public class TestTriangle {
-    Figures triangle;
+    Shapes triangle;
 
     @Before
-    public void initialize() {
+    public void setUp() {
         triangle = new Triangle(2, 2, 2);
     }
 

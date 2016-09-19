@@ -1,20 +1,19 @@
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
 /**
- * @autor JuanaRodriguez on 8/24/2016.
+ * Test for {@link Square}
  */
 
 public class TestSquare {
 
-    Figures square;
+    Shapes square;
 
     @Before
-    public void initialize() {
-        square = new Square(2);
+    public void setUp() {
+        square = new Square(2.0);
     }
 
     @Test

@@ -4,27 +4,28 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
 /**
- * @autor JuanaRodriguez on 8/24/2016.
+ * Test for {@link Circle}
  */
 
 public class TestCircle {
 
-    Figures circle;
+    private static final int RADIO = 2;
+    private Shapes circle;
 
     @Before
-    public void initialize() {
-        circle = new Circle(2);
+    public void setUp() {
+        circle = new Circle(RADIO);
     }
 
     @Test
     public void test_calculateArea() {
-        double areaExpected = 12.566370614359172;
+        final double areaExpected = 12.566370614359172;
         assertEquals(areaExpected, circle.calculateArea());
     }
 
     @Test
     public void test_calculatePerimeter() {
-        double perimeterExpected = 12.566370614359172;
+        final double perimeterExpected = 12.566370614359172;
         assertEquals(perimeterExpected, circle.calculatePerimeter());
     }
 }
